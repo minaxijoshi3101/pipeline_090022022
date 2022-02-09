@@ -1,6 +1,10 @@
-import com.poc.util
-def call(Map pipelineparams)
+import com.poc.util.checkoutSCM;
+
+def call(Map pipelineParams)
 {
+  env.GITGROUP = pipelineParams.GITGROUP
+  env.REPO = pipelineParams.REPO
+  env.BRANCH = pipelineParams.BRANCH
   pipeline
   {
     node("master")
