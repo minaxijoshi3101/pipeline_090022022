@@ -4,7 +4,7 @@ def call(Map pipelineParams)
 {
 SCMURL = "git@github.com:"+pipelineParams.GITGROUP+"/"+pipelineParams.REPO+".git"
 sh '''
-rm -rf ${BRANCH}
+rm -rf ${REPO}
 git clone --singlebranch --branch ${BRANCH} ${SCMURL}
 '''
 }

@@ -17,10 +17,12 @@ def call(Map pipelineParams)
         stage("builld the code and create the docker image")
         {
           echo "build the code"
+          new buildCode().call(pipelineParams)
         }
       stage("source code analysis")
       {
         echo "analyse the source code"
+        new sourceCodeAnalysis().call(pipelineParams)
       }
       stage("push docker image to docker registry")
       {
