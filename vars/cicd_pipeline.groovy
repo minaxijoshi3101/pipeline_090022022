@@ -13,7 +13,7 @@ def call(Map pipelineParams)
       stage("checkout SCM")
       {
        echo "stage to checkout the code from SCM"
-       new checkoutSCM().call(pipelineparams)
+       new checkoutSCM().call(pipelineParams)
       }
         stage("builld the code and create the docker image")
         {
