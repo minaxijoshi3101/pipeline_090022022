@@ -1,5 +1,6 @@
 import com.poc.util.checkoutSCM;
 import com.poc.util.buildCode;
+import com.poc.util.sourceCodeAnalysis;
 def call(Map pipelineParams)
 {
   env.GITGROUP = pipelineParams.GITGROUP
